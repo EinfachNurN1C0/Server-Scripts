@@ -6,8 +6,7 @@ INTERFACE="eth0"
 # Static IP address (e.g. 192.168.*.*)
 STATIC_IP="192.168.1.250"
 
-# Gateway und DNS-Server (dein Router oder DNS-Server-IP)
-GATEWAY="192.168.1.1"
+# DNS server (e.g. Your router's IP address or DNS server's IP address)
 DNS_SERVER="192.168.1.1"
 
 # Path to netplan config file(You may need to change this)
@@ -22,7 +21,6 @@ network:
     $INTERFACE:
       addresses:
         - $STATIC_IP/24
-      gateway4: $GATEWAY
       nameservers:
           addresses: [$DNS_SERVER]
 EOL
