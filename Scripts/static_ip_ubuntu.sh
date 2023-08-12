@@ -4,10 +4,10 @@
 INTERFACE="eth0"
 
 # Static IP address (e.g. 192.168.*.*)
-STATIC_IP="192.168.1.250"
+STATIC_IP="myip"
 
 # DNS server (e.g. Your router's IP address or DNS server's IP address)
-DNS_SERVER="192.168.1.1"
+DNS_SERVER="mydns"
 
 # Path to netplan config file(You may need to change this)
 sudo cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak
@@ -23,7 +23,9 @@ network:
         - $STATIC_IP/24
       nameservers:
           addresses: [$DNS_SERVER]
-EOL
+      routes:
+        - to: default
+          via: $DNS_SERVER
 
 # Apply netplan config
 sudo netplan apply
