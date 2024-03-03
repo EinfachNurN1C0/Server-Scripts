@@ -1,0 +1,10 @@
+Nico/Tools/Backup_System.sh
+Nico/Tools/backup_log.txt
+
+sent 9.481.693 bytes  received 20.542 bytes  542.984,86 bytes/sec
+total size is 85.234.923.440  speedup is 8.969,99
+Klonen erfolgreich abgeschlossen.
+Speicherplatz auf dem gemounteten Laufwerk:
+Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+/dev/sdb        458G     80G  355G   19% /mnt/backup_drive
+Laufwerk erfolgreich demountet.
